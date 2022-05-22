@@ -1,0 +1,42 @@
+/* -- Imports -- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&family=Roboto&display=swap");
+
+/* -- Variables -- */
+$debugapp-font-family: "Poppins", sans-serif;
+$content-font-family: "Roboto", sans-serif;
+$purple-color: hsl(284, 100%, 31%);
+$gray-color: hsl(0, 0%, 93%);
+$white-color: hsl(0, 0%, 100%);
+$title-color: hsla(0, 0%, 0%, 0.9);
+$content-color: hsla(0, 0%, 0%, 0.75);
+
+/* -- Mobile and General design -- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  & .header {
+    background-color: $purple-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    &__icon {
+      width: 1.5em;
+    }
+    &__title {
+      font-family: $debugapp-font-family;
+      color: $white-color;
+    }
+    &__name {
+      font-family: $content-font-family;
+      font-weight: 400;
+    }
+  }
+}

@@ -39,4 +39,26 @@ body {
       font-weight: 400;
     }
   }
+  & .form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1em;
+
+    &__title {
+      width: 16em;
+    }
+    &__content {
+      width: 16em;
+      background-color: $gray-color;
+    }
+    &__button {
+      margin-left: 13.5em;
+      margin-top: -2.5em;
+      
+    }
+  }
 }

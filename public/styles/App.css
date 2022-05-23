@@ -39,4 +39,37 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
+.App .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 1em;
+}
+
+.App .form__title {
+  width: 16em;
+}
+
+.App .form__content {
+  width: 16em;
+  background-color: #ededed;
+}
+
+.App .form__button {
+  margin-left: 13.5em;
+  margin-top: -2.5em;
+}
 /*# sourceMappingURL=App.css.map */

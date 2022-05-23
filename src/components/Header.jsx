@@ -1,8 +1,10 @@
+import React from "react";
+
 const Header = () => {
   return (
     <header className="header">
       <img
-        src="../../public/img/BugHeader.svg"
+        src="/img/BugHeader.svg"
         alt="Bug Header Icon"
         className="header__icon"
       />

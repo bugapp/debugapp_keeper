@@ -1,4 +1,7 @@
-import AddIcon from "@mui/icons-material/Add";
+import React from "react";
+import AddIcon from "@material-ui/icons/Add";
+import { Fab } from "@material-ui/core";
+// import { Zoom } from "@material-ui/core";
 
 const CreateArea = (props) => {
   return (
@@ -8,10 +11,10 @@ const CreateArea = (props) => {
         className="form__title"
         placeholder="Title"
       />
-      <textarea rows="3" placeholder="Content"></textarea>
-      <button>
+      <textarea rows="3" className="form__content" placeholder="Content"></textarea>
+      <Fab className="form__button" size="small">
         <AddIcon />
-      </button>
+      </Fab>
     </form>
   );
 };

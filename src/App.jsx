@@ -1,11 +1,12 @@
+import React from "react";
 import Header from "./components/Header";
 import CreateArea from "./components/CreateArea";
-import "../public/styles/App.css";
 
 function App() {
   return (
     <section className="App">
       <Header />
+      <CreateArea />
     </section>
   );
 }

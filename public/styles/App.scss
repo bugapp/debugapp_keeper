@@ -5,10 +5,11 @@
 $debugapp-font-family: "Poppins", sans-serif;
 $content-font-family: "Roboto", sans-serif;
 $purple-color: hsl(284, 100%, 31%);
-$gray-color: hsl(0, 0%, 93%);
+$dark-purple-color: hsl(284, 100%, 25%);
+$gray-color: hsl(0, 0%, 95%);
 $white-color: hsl(0, 0%, 100%);
-$title-color: hsla(0, 0%, 0%, 0.9);
-$content-color: hsla(0, 0%, 0%, 0.75);
+$black-color: hsla(0, 0%, 0%, 0.9);
+$light-black-color: hsla(0, 0%, 0%, 0.75);
 
 /* -- Mobile and General design -- */
 html,
@@ -18,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 .App {
   & .header {
@@ -46,19 +48,53 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 1em;
+    margin-top: 1.5em;
 
     &__title {
-      width: 16em;
+      width: 20em;
+      height: 2em;
+      padding: 0.5em;
+      background-color: $gray-color;
+      border: 0.2em solid $purple-color;
+      border-radius: 0.5em 0.5em 0.5em 0.5em;
+      text-indent: 1em;
+      color: $black-color;
+      font-weight: 700;
+      outline: none;
     }
     &__content {
-      width: 16em;
+      width: 20em;
+      height: 5em;
+      padding: 0.5em;
       background-color: $gray-color;
+      border: 0.2em solid $purple-color;
+      border-top: none;
+      border-radius: 0em 0em 0.5em 0.5em;
+      text-indent: 1em;
+      color: $light-black-color;
+      margin-top: -0.1em;
+      resize: none;
+      outline: none;
+      box-shadow: 0px 19px 15px 5px rgba(0, 0, 0, 0.15);
     }
     &__button {
-      margin-left: 13.5em;
-      margin-top: -2.5em;
-      
+      margin-left: 17.8em;
+      margin-top: -2.6em;
+      border-radius: 0.3em;
+      width: 2.5em;
+      height: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $purple-color;
+
+      &:hover {
+        background-color: $dark-purple-color;
+      }
+      & .button__icon {
+        font-size: 2em;
+        color: $white-color;
+      }
     }
   }
 }

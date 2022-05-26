@@ -97,4 +97,57 @@ body {
       }
     }
   }
+  & .section-notes {
+    margin-top: 2em;
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    & .note {
+      background-color: $white-color;
+      min-width: 4em;
+      max-width: 6em;
+      position: relative;
+      padding: 1em;
+      border-radius: 0.5em;
+      border: 0.1em solid $purple-color;
+      box-shadow: 0px 19px 15px 5px rgba(0, 0, 0, 0.15);
+
+      &__icon {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        width: 1em;
+      }
+      &__title {
+        font-size: 0.8em;
+        color: $black-color;
+      }
+      &__content {
+        font-size: 1em;
+        color: $light-black-color;
+      }
+      &__delete {
+        border-radius: 0.3em;
+        width: 2.5em;
+        height: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $purple-color;
+        position: absolute;
+        right: -0.1em;
+        bottom: -0.15em;
+
+        &:hover {
+          background-color: $dark-purple-color;
+        }
+        .delete__icon {
+          font-size: 1.5em;
+          color: $white-color;
+        }
+      }
+    }
+  }
 }

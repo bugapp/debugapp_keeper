@@ -116,4 +116,72 @@ body {
   font-size: 2em;
   color: white;
 }
+
+.App .section-notes {
+  margin-top: 2em;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+}
+
+.App .section-notes .note {
+  background-color: white;
+  min-width: 4em;
+  max-width: 6em;
+  position: relative;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 0.1em solid #74009e;
+  -webkit-box-shadow: 0px 19px 15px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 19px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+.App .section-notes .note__icon {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+}
+
+.App .section-notes .note__title {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.App .section-notes .note__content {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.App .section-notes .note__delete {
+  border-radius: 0.3em;
+  width: 2.5em;
+  height: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #74009e;
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.15em;
+}
+
+.App .section-notes .note__delete:hover {
+  background-color: #5e0080;
+}
+
+.App .section-notes .note__delete .delete__icon {
+  font-size: 1.5em;
+  color: white;
+}
 /*# sourceMappingURL=App.css.map */

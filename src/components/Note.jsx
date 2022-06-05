@@ -11,10 +11,12 @@ const Note = (props) => {
     });
   };
   const handleClick = (event) => {
-    alert(`
+    if (event.target.className === "note") {
+      alert(`
       - Title: ${props.title};
       - Content: ${props.content}
       `);
+    }
   };
 
   return (

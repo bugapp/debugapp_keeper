@@ -3,23 +3,25 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { Fab } from "@material-ui/core";
 
 const Note = (props) => {
-  const deleteNote = () => {
+  const deleteNote = (id) => {
     props.setNotes((prevNotes) => {
       return prevNotes.filter((note, index) => {
-        return props.id !== index ? note : "";
+        return id !== index ? note : "";
       });
     });
   };
   const handleClick = (event) => {
-    if (event.target.className === "note") {
-      alert(`
-      - Title: ${props.title};
-      - Content: ${props.content}
-      `);
-    }
+    props.setPopup({
+      id: props.id,
+      title: props.title,
+      content: props.content,
+      deleteNote: deleteNote,
+    });
   };
 
-  return (
+  return props.id === props.popup.id ? (
+    ""
+  ) : (
     <div className="note" onClick={handleClick}>
       <img
         src="/img/BugNotes.svg"
@@ -37,7 +39,12 @@ const Note = (props) => {
           : props.content}
       </p>
 
-      <Fab className="note__delete" onClick={deleteNote}>
+      <Fab
+        className="note__delete"
+        onClick={() => {
+          deleteNote(props.id);
+        }}
+      >
         <DeleteIcon className="delete__icon" />
       </Fab>
     </div>

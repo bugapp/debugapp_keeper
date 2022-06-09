@@ -11,12 +11,21 @@ const Note = (props) => {
     });
   };
   const handleClick = (event) => {
-    props.setPopup({
-      id: props.id,
-      title: props.title,
-      content: props.content,
-      deleteNote: deleteNote,
-    });
+    const { className } = event.target;
+
+    if (
+      className.baseVal === "MuiSvgIcon-root" ||
+      className.baseVal === ""
+    ) {
+      deleteNote(props.id);
+    } else {
+      props.setPopup({
+        id: props.id,
+        title: props.title,
+        content: props.content,
+        deleteNote: deleteNote,
+      });
+    }
   };
 
   return props.id === props.popup.id ? (
@@ -39,13 +48,8 @@ const Note = (props) => {
           : props.content}
       </p>
 
-      <Fab
-        className="note__delete"
-        onClick={() => {
-          deleteNote(props.id);
-        }}
-      >
-        <DeleteIcon className="delete__icon" />
+      <Fab className="note__delete" onClick={handleClick}>
+        <DeleteIcon />
       </Fab>
     </div>
   );

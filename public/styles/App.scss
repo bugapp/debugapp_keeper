@@ -151,7 +151,9 @@ body {
         &:hover {
           background-color: $dark-purple-color;
         }
-        .delete__icon {
+        .MuiSvgIcon-root {
+          // delete-button icon
+          padding: 20%;
           font-size: 1.5em;
           color: $white-color;
         }

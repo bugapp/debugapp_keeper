@@ -192,7 +192,8 @@ body {
   background-color: #5e0080;
 }
 
-.App .section-notes .note__delete .delete__icon {
+.App .section-notes .note__delete .MuiSvgIcon-root {
+  padding: 20%;
   font-size: 1.5em;
   color: white;
 }

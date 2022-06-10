@@ -199,14 +199,12 @@ body {
 }
 
 .App .section-notes .background-popup {
-  position: absolute;
-  z-index: 1;
+  position: fixed;
+  z-index: 2;
   top: 0%;
   width: 100%;
   min-height: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;

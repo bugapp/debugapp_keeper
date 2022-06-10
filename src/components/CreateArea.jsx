@@ -19,7 +19,7 @@ const CreateArea = (props) => {
       };
     });
   };
-  const handleClick = (event, submit = false) => {
+  const handleClick = (event) => {
     const { className, id } = event.target;
 
     if (className === "form__title") {
@@ -30,7 +30,7 @@ const CreateArea = (props) => {
     if (
       id === "addButton" ||
       className === "form" ||
-      (className === "form__title" && submit === true)
+      className === "form__button"
     ) {
       const titleInput = document.querySelector(".form__title");
       const contentInput = document.querySelector(".form__content");
@@ -48,6 +48,8 @@ const CreateArea = (props) => {
         props.setNotes((prevNotes) => {
           return [...prevNotes, newNote];
         });
+        titleInput.value = "";
+        contentInput.value = "";
       }
     }
   };
@@ -77,12 +79,8 @@ const CreateArea = (props) => {
           autoFocus={true}
         ></textarea>
       )}
-      <Zoom in={focus}>
-        <Fab
-          className="form__button"
-          disabled={!focus}
-          onClick={handleClick}
-        >
+      <Zoom in={focus} onClick={handleClick} className="form__button">
+        <Fab className="form__button" disabled={!focus}>
           <AddIcon className="button__icon" id="addButton" />
         </Fab>
       </Zoom>

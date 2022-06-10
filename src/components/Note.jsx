@@ -11,14 +11,12 @@ const Note = (props) => {
     });
   };
   const handleClick = (event) => {
-    const { className } = event.target;
-
-    if (
-      className.baseVal === "MuiSvgIcon-root" ||
-      className.baseVal === ""
-    ) {
-      deleteNote(props.id);
-    } else {
+    const { baseVal } = event.target.className;
+    console.log(baseVal);
+    if (baseVal === "" || baseVal !== "") {
+      console.log("DELETA PORRA");
+    }
+    if (baseVal === undefined) {
       props.setPopup({
         id: props.id,
         title: props.title,
@@ -48,8 +46,13 @@ const Note = (props) => {
           : props.content}
       </p>
 
-      <Fab className="note__delete" onClick={handleClick}>
-        <DeleteIcon />
+      <Fab
+        className="note__delete"
+        onClick={() => {
+          deleteNote(props.id);
+        }}
+      >
+        <DeleteIcon className="delete__icon" />
       </Fab>
     </div>
   );

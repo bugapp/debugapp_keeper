@@ -176,7 +176,8 @@ body {
         background-color: $white-color;
         padding: 2em;
         margin: 3em 1em;
-        width: 60%;
+        width: fit-content;
+        max-width: 60%;
         position: relative;
         word-wrap: break-word;
         border-radius: 0.5em;

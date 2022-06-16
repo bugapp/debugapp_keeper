@@ -12,9 +12,8 @@ const Note = (props) => {
   };
   const handleClick = (event) => {
     const { baseVal } = event.target.className;
-    console.log(baseVal);
+
     if (baseVal === "" || baseVal !== "") {
-      console.log("DELETA PORRA");
     }
     if (baseVal === undefined) {
       props.setPopup({
@@ -36,13 +35,13 @@ const Note = (props) => {
         className="note__icon"
       />
       <h2 className="note__title">
-        {props.title.length >= 30
-          ? props.title.substring(0, 30) + "..."
+        {props.title.length >= 25
+          ? props.title.substring(0, 25) + "..."
           : props.title}
       </h2>
       <p className="note__content">
-        {props.content.length >= 30
-          ? props.content.substring(0, 30) + "..."
+        {props.content.length >= 25
+          ? props.content.substring(0, 25) + "..."
           : props.content}
       </p>
 

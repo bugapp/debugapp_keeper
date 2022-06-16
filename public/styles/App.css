@@ -29,6 +29,7 @@ body {
 
 .App .header__icon {
   width: 1.5em;
+  height: 2.5em;
 }
 
 .App .header__title {
@@ -153,6 +154,7 @@ body {
   right: 0.5em;
   top: 0.5em;
   width: 1em;
+  height: 1.5em;
 }
 
 .App .section-notes .note__title {
